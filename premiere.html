@@ -241,7 +241,7 @@ footer {
     <h3>Presenting</h3></span>
     <h1>Echoes of Destiny : A Premiere You Won't Forget</h1>
     <p class="p">Premiering <b>1st January 2024</b></p>
-    <!--<a href="index.html" class="b">Experience NOW</a>-->
+    <a href="index.html" class="b">Experience NOW</a>
   </header>
 
   <section class="synopsis">
@@ -313,22 +313,34 @@ footer {
   </footer>
 
   <script>
-    const countdown = document.querySelector('.countdown');
-    function updateCountdown() {
-        const targetDate = new Date('2024-1-1 00:00:00'); // Adjust this date for the actual premiere
-        const now = new Date();
-        const difference = targetDate - now;
-    
-        const seconds = Math.floor(difference / 1000);
-        const minutes = Math.floor(seconds / 60);
-        const hours = Math.floor(minutes / 60);
-        const days = Math.floor(hours / 24);
-    
-        countdown.querySelector('.days').textContent = days.toString().padStart(2, '0');
-        countdown.querySelector('.hours').textContent = (hours % 24).toString().padStart(2, '0');
-        countdown.querySelector('.minutes').textContent = (minutes % 60).toString().padStart(2, '0');
-        countdown.querySelector('.seconds').textContent = (seconds % 60).toString().padStart(2, '0');
-        
+const countdown = document.querySelector('.countdown');
+const elementsToHide = document.querySelectorAll('.b'); // Select elements with class "b"
+const elementsToShow = document.querySelectorAll('.p');
+
+function updateCountdown() {
+  const targetDate = new Date('2024-01-01 00:00:00'); // Adjust this date for the actual premiere
+  const now = new Date();
+  const difference = targetDate - now;
+
+  const seconds = Math.floor(difference / 1000);
+
+  // If countdown has passed, hide elements
+  if (seconds <= 0) {
+    elementsToHide.forEach((element) => element.style.display = 'none');
+    elementsToShow.forEach((element) => element.style.display = 'block');
+  } else {
+    elementsToHide.forEach((element) => element.style.display = 'block'); // Ensure visibility if not yet passed
+    elementsToShow.forEach((element) => element.style.display = 'none');
+
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    countdown.querySelector('.days').textContent = days.toString().padStart(2, '0');
+    countdown.querySelector('.hours').textContent = (hours % 24).toString().padStart(2, '0');
+    countdown.querySelector('.minutes').textContent = (minutes % 60).toString().padStart(2, '0');
+    countdown.querySelector('.seconds').textContent = (seconds % 60).toString().padStart(2, '0');
+  }
 }
 
 updateCountdown();
