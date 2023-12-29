@@ -251,26 +251,27 @@ footer {
     <p>In the dazzling city of Mizune, beneath the neon glow, whispers of another realm stir. A boy named Hiroto awakens to echoes of a past life, a warrior's spirit trapped within him. As shadows threaten to engulf both worlds, Hiroto with Hikari and their friends Shoko, and Takeru, must rise to become the heroes that destiny has foretold.</p>
     </center>
   </section>
-  <section style="margin:0px"><h2 style="margin:0px">Mark Your Calendars</h2></section>
-  <section class="countdown">
+  <section style="margin:0px" class="p"><h2 style="margin:0px">Mark Your Calendars</h2></section>
+  <section class="countdown p">
 
-    <div class="timer">
+    <div class="timer p">
       <div class="days">00</div>
       <p>Days</p>
     </div>
-    <div class="timer">
+    <div class="timer p">
       <div class="hours">00</div>
       <p>Hours</p>
     </div>
-    <div class="timer">
+    <div class="timer p">
       <div class="minutes">00</div>
       <p>Minutes</p>
     </div>
-    <div class="timer">
+    <div class="timer p">
       <div class="seconds">00</div>
       <p>Seconds</p>
     </div>
   </section>
+   <center><a href="index.html" class="b">Experience NOW</a></center>
 
   <section class="characters">
     <h2>Meet the Characters</h2>
@@ -306,6 +307,7 @@ footer {
     <center>
     <p>Prepare to be enthrilled by a story that will resonate deep within your soul. <br> Experience <b>Echoes of Destiny</b> on <u><b>1st January 2024</b></u></p>
     </center>
+     <center><a href="index.html" class="b">Experience NOW</a></center>
   </section>
 
   <footer>
@@ -325,7 +327,7 @@ function updateCountdown() {
   const seconds = Math.floor(difference / 1000);
 
   // If countdown has passed, hide elements
-  if (seconds <= 0) {
+  if (seconds >= 0) {
     elementsToHide.forEach((element) => element.style.display = 'none');
     elementsToShow.forEach((element) => element.style.display = 'block');
   } else {
