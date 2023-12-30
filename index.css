@@ -1,0 +1,122 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    transition: 200ms ease-in-out;
+}
+body{
+    overflow-x: hidden;
+}
+.no-margin{
+    margin: 0px;
+}
+header{
+    padding-left: 3vw;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    color: white;
+    background-color: black;
+}
+header h1{
+    font-weight: 450;
+    font-family: serif;
+    width: 100vw;
+}
+header h6{
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.heroimage{
+    width: 100vw;
+    height:60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:3vh 0vw 7vh 2vw;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 500px 0px 900px 0px rgba(24, 24, 24, 0.908);
+}
+.imagedetails{
+    font-family: sans-serif;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.687);
+    color: aliceblue;
+}
+.top{
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow: 0px 0px 3px white;
+}
+.heroimage .box{
+    background-color: aliceblue;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    padding:4px;
+    margin: 6px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.681);
+}
+.vollist{
+    background-color: black;
+    color: aliceblue;
+    padding: 2vh;
+}
+.vollist h3{
+    font-family: sans-serif;
+    background-color: grey;
+    border: 3px groove white;
+    width: fit-content;
+    border-radius: 50px;
+    color: rgb(40, 40, 40);
+    font-weight: 500;
+    padding:7px 15px;
+    margin-left: 25px;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px azure;
+}
+.li{
+    height:2in ;
+    width: 1.5in;
+    margin: 15px;
+}
+.li .top{
+    border: 1px groove aliceblue ;
+    border-radius: 7px;
+    height:1.5in ;
+    width: 1.5in;
+    padding: 10px;
+    background-image: url("background.jpg");
+    box-shadow: 0px 0px 20px 1px rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.li .top:hover{
+    animation-duration: 500ms;
+    box-shadow: 0px 6px 20px 6px rgb(0, 255, 255);
+}
+
+.top span{
+    margin:2px;
+    text-shadow: 0px 0px 8px black;
+}
+.bottom{
+    padding: 5px;
+}
+.list{
+    padding: 15px;
+    display: flex;
+    overflow-x: auto;
+    height: 3in;
+}
+footer{
+    background-color: grey;
+    color:rgb(25, 25, 25);
+}
+a{
+    text-decoration: none;
+    color:inherit
+}
